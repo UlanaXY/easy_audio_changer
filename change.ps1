@@ -71,5 +71,9 @@ $device_list = Get-AudioDevice -List
 $selectedDevice = Select-AudioDevice $device_list
 
 if ($selectedDevice) {
-  Set-AudioDevice $selectedDevice.ID -DefaultOnly
+  Set-AudioDevice $selectedDevice.ID -DefaultOnly | out-null
 }
+
+
+
+ 
